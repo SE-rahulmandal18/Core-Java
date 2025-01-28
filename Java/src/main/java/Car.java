@@ -1,9 +1,21 @@
 public class Car {
+
+    static int noOfCarsSold;
     int noOfWheels;
     String color;
     float maxSpeed;
     float currentFuelInLiters;
     int noOfSeats;
+
+    static {  // static block called only once when the class is loaded
+        noOfCarsSold = 0;
+        System.out.println("I am in static block");
+    }
+
+    {  // init block called every time the obj is created
+        noOfCarsSold++;
+        System.out.println("I am in Init block");
+    }
 
     Car(String color) {
         noOfWheels = 4;
@@ -16,7 +28,7 @@ public class Car {
     Car() {
 
         this("Black"); // constructor chaining, this calls above const -> const calling itself
-        currentFuelInLiters= 2;
+        currentFuelInLiters= 5;
 
 //        noOfWheels = 4;
 //        color = "Black";

@@ -1,8 +1,6 @@
 public class Driver {
-
     static int minAgeForDriving = 18;
     String name;
-
     int age;
     String dateOfLicence;
 
@@ -21,8 +19,8 @@ public class Driver {
 //        myCar.drive();
 //        System.out.println( myCar.getCurrentFuelLevel());
 
-          Car swift = new Car("Red");
-          Car thar = new Car();
+          Car swift = new Car("Red");  //agr constructor called
+          Car thar = new Car(); // no-agr constructor called
 //          swift.addFuel(6);
 //          Car startedCar  =  swift.start();
 //          startedCar.drive();
@@ -30,9 +28,9 @@ public class Driver {
         System.out.println(swift.color);
         System.out.println(thar.color);
 
-//          Driver myDriver = new Driver();
-//          myDriver.dateOfLicence="10 Sep 2024";
-//        System.out.println(minAgeForDriving);
+          Driver myDriver = new Driver();
+          myDriver.dateOfLicence="10 Sep 2024";
+          System.out.println(minAgeForDriving);
 
   }
 }
