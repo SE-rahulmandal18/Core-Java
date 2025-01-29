@@ -19,7 +19,11 @@ public class Car {
     }
 
     public void setColor(String color) {
-        this.color = color;
+        if (color.equals("Yellow")) {
+            System.out.println("I dont want this color to get set");
+        } else {
+            this.color = color;
+        }
     }
 
     public  String getModel(){
