@@ -1,6 +1,4 @@
-package challenge40;
-
-import java.util.Scanner;
+package arraychallenge;
 
 public class ArraySumAverage {
     public static void main(String[] args) {

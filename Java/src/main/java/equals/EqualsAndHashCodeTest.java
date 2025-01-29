@@ -5,6 +5,8 @@ public class EqualsAndHashCodeTest {
         Person person1 = new Person("Rahul", 26, "001");
         Person person2 = new Person("Rahul", 26, "001");
 
+        System.out.println(person1.equals(person2));
+
         if (person1 == person2){
             System.out.println("Equals");
         }else{

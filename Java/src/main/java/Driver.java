@@ -30,7 +30,7 @@ public class Driver {
 
           Driver myDriver = new Driver();
           myDriver.dateOfLicence="10 Sep 2024";
-          System.out.println(minAgeForDriving);
+          System.out.println(minAgeForDriving); // or System.out.println(Driver.minAgeForDriving);
 
   }
 }

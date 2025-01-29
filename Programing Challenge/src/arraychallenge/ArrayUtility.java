@@ -1,4 +1,4 @@
-package challenge40;
+package arraychallenge;
 
 import java.util.Scanner;
 
