@@ -2,6 +2,8 @@ package in.kgcoding.challenge83;
 
 public class TestShapes {
     public static void main(String[] args) {
+//        Shape shape = new Shape();
+
         Circle circle = new Circle(5);
         Sqaure sqaure = new Sqaure(10.3);
 

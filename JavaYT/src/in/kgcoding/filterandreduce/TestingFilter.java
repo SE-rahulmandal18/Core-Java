@@ -24,7 +24,7 @@ public class TestingFilter {
 //        });
 
 // alternate of above using lambda func
-//        fruits.stream().forEach(fruit -> System.out.println(fruit));
+        fruits.stream().forEach(fruit -> System.out.println(fruit));
 
         //alternate of above using method reference
 //        fruits.stream().forEach(System.out::println);

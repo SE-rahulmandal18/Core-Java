@@ -31,7 +31,25 @@ public class TestingSorting {
                 .max() // Find the max salary
                 .orElse(0.0); // Default if no salary exists (empty list)
 
-        // Print the highest salary
+
+
+
+
+        int maxSalary1 = employees.stream()
+                .map(employee -> employee.getSalary())     // Map each Employee to their salary using a lambda
+                .reduce((salary1, salary2) -> salary1 > salary2 ? salary1 : salary2)  // Lambda for max
+                .orElse(0);                            // Default to 0.0 if no salary exists (empty list)
+
+        int maxSalary2 = employees.stream()
+                .map(Employee::getSalary)               // Map each Employee to their salary
+                .reduce(Integer::max)                    // Use the reduce method to find the max salary
+                .orElse(0);                           // Default to 0.0 if no salary exists (empty list)
+
+
+
+// Print the highest salary
         System.out.println("The highest salary is: " + maxSalary);
+
+
     }
 }
