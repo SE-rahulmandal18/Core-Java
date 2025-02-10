@@ -1,6 +1,4 @@
-package com.example.geometry;
-
-import java.util.concurrent.locks.ReadWriteLock;
+package com.example77.geometry;
 
 public class Rectangle {
     private double length;
