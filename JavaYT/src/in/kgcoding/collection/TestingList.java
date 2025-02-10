@@ -3,78 +3,47 @@ package in.kgcoding.collection;
 import java.util.*;
 
 
-class Student {
-    private String name;
-    private double gpa;
-
-    public Student(String name, double gpa) {
-        this.name = name;
-        this.gpa  = gpa;
-    }
-
-    public String getName() { return name; }
-    public double getGpa()  { return gpa; }
 
 
+/*
+    class StringLengthComparator implements Comparator<String>{
+        //  o1    o2
+        // "ok" "bye"
 
-class StringLengthComparator implements Comparator<String>{
-    //  o1    o2
-    // "ok" "bye"
-
-    @Override
-    public int compare(String o1, String o2) {
-        return o2.length() - o1.length();
+        @Override
+        public int compare(String o1, String o2) {
+            return o2.length() - o1.length();
 //        return o1.length() - o2.length();
+        }
     }
-}
 
 
 
-class MyComparator implements Comparator<Integer>{
+    class MyComparator implements Comparator<Integer>{
 
 
-    // int -ve atta h to o1 phele ayega o2 s
-    // int 0 atta h to o1 & o2 ordering m equal h
-    // int +ve atta h to o1 baad m ayega o2 s
+        // int -ve atta h to o1 phele ayega o2 s
+        // int 0 atta h to o1 & o2 ordering m equal h
+        // int +ve atta h to o1 baad m ayega o2 s
 
-    // example  SORT IN ASCENDING ORDER
-    //   o1 o2
-    //   5  3
-    //   3  5
-    @Override
-    public int compare(Integer o1, Integer o2) {
-        return o2 - o1;
+        // example  SORT IN ASCENDING ORDER
+        //   o1 o2
+        //   5  3
+        //   3  5
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return o2 - o1;
 //          return o1 - o2;
 
+        }
     }
-}
+*/
 
 
+    public class TestingList {
+        public static void main(String[] args) {
 
-public class TestingList {
-    public static void main(String[] args) {
-
-        List<Student> students = new ArrayList<>();
-        students.add(new Student("Charlie", 3.5));
-        students.add(new Student("Bob", 3.7));
-        students.add(new Student("Alice", 3.5));
-        students.add(new Student("Akshit", 3.9));
-        students.sort(null);
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
+            /*
 
         List<Integer> list = new ArrayList<>();
         list.add(1);
@@ -91,23 +60,6 @@ public class TestingList {
         words.sort(new StringLengthComparator());
 //        words.sort((a, b) -> b.length() - a.length());
         System.out.println(words);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -234,6 +186,6 @@ public class TestingList {
         }*/
 
 
-    }
+        }
 
-}
+    }
