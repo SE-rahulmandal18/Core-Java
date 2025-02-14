@@ -21,4 +21,9 @@ public abstract class Vehicle implements Transport {
     public  void commute(){
         System.out.println("Going.........");
     }
+
+    //    @Override
+//    public void getSetGo() {
+//        System.out.println("going to pacle....");
+//    }
 }
