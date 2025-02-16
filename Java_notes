@@ -1,0 +1,887 @@
+Ctrl + Alt + L - Code Reformatting
+
+
+
+
+Java YT :
+
+
+
+===================================================================================
+
+ Data abstraction :
+refers to providing only essential information about the data to the outside world, hiding the background details or implementation. 
+
+
+Encapsulation
+ is defined as the wrapping up of data under a single unit. 
+it is the mechanism that binds together code and the data it manipulates. 
+In Encapsulation, the variables or data of a class are hidden from any other class
+ and can be accessed only through any member function of their class in which they are declared. 
+As in encapsulation, the data in a class is hidden from other classes, so it is also known as data-hiding.
+
+Inheritance
+The capability of a class to derive properties and characteristics from another class is called Inheritance. 
+When we write a class, we inherit properties from other classes.
+ So when we create a class, we do not need to write all the properties and functions again and again, 
+as these can be inherited from another class that possesses it. 
+Inheritance allows the user to reuse the code whenever possible and reduce its redundancy.
+
+ Polymorphism: 
+The word polymorphism means having many forms. 
+In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. 
+For example, A person at the same time can have different characteristics. 
+Like a man at the same time is a father, a husband, an employee. 
+So the same person posses different behavior in different situations. This is called polymorphism.
+
+
+ Compile-Time Polymorphism (Method Overloading)
+Definition: The method to be invoked is determined at compile time.
+How it works: Achieved through method overloading, where multiple methods in the same class share the same name but differ in:
+Number of parameters
+Type of parameters
+Order of parameters
+
+
+ Runtime Polymorphism (Method Overriding)
+Definition: The method to be invoked is determined at runtime.
+How it works: Achieved through method overriding, where a subclass provides a specific implementation of a method that is already defined in its superclass.
+Key Features:
+Happens at runtime.
+Involves inheritance and method overriding.
+Enables dynamic method dispatch (deciding which method to call at runtime)
+
+Object oriented programing 
+
+Eg: we need to identify the object . for example in baking application
+
+the objects can be customer, money , acccount
+
+custormer - related data has to be in customer class
+eg: custormer kyc, name, age, dob, pan , addhar 
+
+customer function - withdraw , deposit 
+
+
+money class -  paisa kb jama hua h, kis type ka paisa h
+
+finally the obj will interact with each other
+
+==================================================
+
+class properties are called instance variable
+class method are called instance methods
+
+
+
+Class is a blueprint, Object are real values in memory.
+
+new is a JavaKeyword used to instantiate a class.
+
+Car myCar = new Car();
+
+
+==================================
+
+this keyword:
+
+1.Refers to the currrent instance of the variable
+2. can be used to invoke a constructor of the same class
+
+
+
+Static keyword :
+
+1. Static Variables: Belong to the class, not individual instance.
+shared among all instance of the class.
+
+2.Static Methods: Can be called without creating an object of the class
+Can only directly access static variables and other static methods.
+
+3.Static methods and blocks cannot directly access non-static members
+(variables and methods) of the class.
+
+ static filed can be accessed either in static or non static method
+but non static filed cannot be accessed in static method
+to acess the non static filed in static we need to create the object class
+
+==================================================
+
+Constructor : 
+
+
+=============================
+
+Encapsultaion -
+ when an object only exposed to selected information.
+
+Eg In Bank account - we show Name, these might will be public, but bank Acc
+mai paise kitne h, bank acc ka no kya h , thse are private info we dont disclose this
+
+so when we create a Account class or object we show only selected info.
+
+====================================
+
+
+In General multiple classes cannot be inherited in java but multiple interface can be inherited
+
+
+===========================
+
+Abstract class - If a class in abstract we cannot instantiate , i.e we cannot create
+object of the class. The sole purpose of the abstract class is to get inherite by other class
+
+
+Interface - In interface its methods are by default public abstract
+if we use interface than we use implements keyword and if it is a class than we use extends keyword
+
+
+==============
+
+Exception: An exception is an event that disrupts the normal flow of the program. 
+It usually happens when the program encounters something unexpected, 
+such as invalid input, a file not found, or a network failure.
+
+Error: An error represents a severe problem that usually cannot be recovered from.
+ It often indicates issues in the environment or system that the program is running on, 
+like running out of memory or hardware failure.
+
+Exception: 
+FileNotFoundException:
+ArithmeticException
+NullPointerException: Occurs when you try to use a reference that is null.
+
+Error:
+OutOfMemoryError: Happens when the JVM runs out of memory.
+StackOverflowError: Occurs when there is too much recursion and the stack memory overflows.
+
+
+========================================
+
+States of Thread :
+
+New :
+ A thread is in the New state when it is created but has not yet started running.
+Example: You have created a thread object, but you haven’t called start() yet.
+
+Runnable (Ready to Run):
+
+A thread is in the Runnable state when it is ready to run, or it's actively running but waiting for CPU time to be assigned.
+Once start() is called on the thread, it moves from New to Runnable.
+Note that, despite being in the Runnable state, the thread may not immediately be executing because the 
+operating system or Java thread scheduler determines when to allocate CPU time to the thread.
+
+
+Blocked (Waiting for a resource):
+A thread is in the Blocked state when it is blocked and cannot proceed because it is waiting for a resource, like a lock (in the case of synchronized code).
+This typically happens when a thread tries to access a synchronized block of code but another thread already holds the lock.
+
+Timed Waiting (Waiting for a specific time):
+A thread is in the Timed Waiting state when it is waiting for a specific period of time (milliseconds or nanoseconds) before it is allowed to proceed.
+
+
+Terminated (Dead):
+A thread is in the Terminated state when it has finished executing or has been terminated (either normally or by being interrupted).
+A thread can only reach the Terminated state after it completes its run() method or when it is explicitly stopped.
+======================================
+Java 8.
+
+
+
+
+Streams - represent a sequence of element . they only provide the result as per the
+pipeline method.
+Each intermediate operation is lazily executed and returns a stream as a result, 
+hence various intermediate operations can be pipelined. 
+Terminal operations mark the end of the stream and return the result.
+
+
+Intermidiate Opereation:
+
+filter()  
+map()      -Use Case: When you need to transform an object of type T into an object of type R.
+sorted()
+distinct()
+
+
+Terminal Operations:
+
+collect(): It is used to return the result of the intermediate operations performed on the stream.
+
+forEach(): It iterates all the elements in a stream. 
+
+reduce(): It is used to reduce the elements of a stream to a single value. 
+
+min()
+max()
+toArray()
+
+
+Short Circuit Operations :
+
+anyMatch(): it checks the stream if it satisfies the given condition. 
+
+findFirst(): it checks the element that matches a given condition and stops processing when it finds it.
+
+
+Java Functional Interfaces:
+
+A functional interface in Java is an interface that contains only one abstract method.
+Functional interfaces can have multiple default or static methods, but only one abstract method.
+ 
+@FunctionalInterface Annotation
+@FunctionalInterface annotation is used to ensure that the functional interface cannot have more than one abstract method. 
+In case more than one abstract methods are present, the compiler flags an “Unexpected @FunctionalInterface annotation” message. 
+However, it is not mandatory to use this annotation.
+
+
+
+Built-In Java Functional Interfaces:
+
+Runnable: This interface only contains the run() method.
+Comparable: This interface only contains the compareTo() method.
+ActionListener: This interface only contains the actionPerformed() method.
+Callable: This interface only contains the call() method.
+
+
+Types of Functional Interfaces in Java :
+
+Consumer<T> -  takes a single input argument of type T and returns no result
+Predicate<T> -  takes a single input argument of type T. It returns a boolean value 
+Function <T, R>-  Function<T, R> is a functional interface that represents a function that takes an argument of type T and returns a result of type R
+Supplier <T>-   It takes no arguments and returns a result of type T.    get() method
+
+ 
+forEach - takes a comsumer
+filter - takes Predicate
+map - takes Function 
+
+
+=========================================================================Iter=
+1. Iterable Interface
+The Iterable interface provides the method iterator(), which returns an Iterator that can be used to loop through the elements in a collection.
+
+Collection Interface (extends Iterable)
+The Collection interface is the root interface of the Java Collections Framework, and it extends the Iterable interface.
+ As a result, all classes that implement the Collection interface also implement the Iterable interface, 
+which means that you can use a for-each loop or an Iterator to iterate over them.
+
+
+List - ArrayList, LinkedList, Vector, Stack, CopyOnWriteArrayList
+
+Keyfeature of List : 
+1) Order Preservation
+2) Index-Based Access
+3) Allow Duplicates
+
+
+ArrayList - When you create an ArrayList, it has intial capacity(default is 10).
+This capacity refers to the size of the internal arrray(elementData) that can hold element
+before needing to resize.
+If the internal array is full, the ArrayList will create a new array with a larger capacity(with 1.5 x)
+
+Copying Elements: When resizing occurs, all elements from the old array is copied
+to the new array, which is an O(n) operation, where n is the number of Elements
+in the ArrayList.
+
+Using reflection we can print the capacity of ArrayList.
+Size can be printed using list.size() method.
+
+
+Comparator is an interface that allows us to define custom ordering for objects."
+Comparator is for custom ordering(ascending order) and is defined outside the class.
+
+compare(T o1, T o2) -> compare two object of same type and determine their order.
+
+
+
+
+LinkedList : 
+
+ - is a linear data structure where each element is a seperate obj called a node.
+
+Data - The value stored in the node.
+Pointer - Two pointer, one pointing to the next node(next), and the other pointing to
+the previous node(previous).
+
+Insertion and deletion is faster as compared to ArrayList. because it doesnot require
+shifting of elements as in ArrayList.
+
+LinkedList require more memory as it need to store reference to next and prev node
+
+Time complexity of LinkedList is - O(n)
+
+
+LinkedList aslo behaves as Stack and Queue
+
+
+
+Vector - 
+
+Sincer vector methods are synchronized, it ensures that only one thread
+can access the vector at a time. This makes sure it thread-safe but can introduce
+performance overhead in single threaded env synchornization adds locking and 
+unlocking adds.
+
+In modern java applications, ArrayList jus generally preferred over Vector
+when synchronization isn't required. For thread safe collections, the CopyOnWriteArrayList
+or ConcurrentHashMap from the java.util.concurrent package is often recommended instead.
+
+
+
+Stack :
+
+Since stack extends vector it is thread-safe.
+
+
+
+=====================================================
+
+HashMap : is an object that maps keys to value. It cannot contains duplicate
+keys, and each key can map to at most one value.
+
+Each key maps to single value.
+
+Order : Some implementation maintain insertion order(LinkedHashMap),
+natural order(TreeMap), or no order(HashMap)
+
+Internal Working of HashMap : 
+
+Key - The identifier used to retrive the value
+
+Value - The data associated with the key.
+
+Bucket -  A place where key-value pair are stored. Think of buckets as cells in a list(array)
+Bucket is an internal array that store the key-value pair.
+
+HashFunction - Convert a key into an index(Bucket location) for storage.
+
+
+
+LinkedHashMap = maintainer order insertion
+
+
+
+=============================================================================================
+
+======================================================================================
+
+
+
+
+
+
+
+
+Coupling refers to how closely connected different components or system are
+
+Tight coupling describes a scenario where software components are highly depented on  each other.
+so if we make changes in one component that necssecates the change in other compontes. that means hight dependent on each other
+
+Loose coupling describes a scenario where software components are less depented on  each other.
+so if we make changes in one component will have minimal or less impact on the other compontes.
+this makes the system much more flexibale and relaible or easy to modify or extend.
+
+Eg: let suppose we have an interface that is interacting with the application through the database .so if  the database
+changes we just need to change the implementation behind the interface and this would not effect the rest of the applications.
+
+
+wasys to Achieving Loose Coupling
+ 
+ - Through interface and abstraction
+ - Through Dependency Injection
+ - Through Event Driven Architecture
+
+
+--------------------------------------
+Types of Spring container
+Aplication Context
+BeanFactory
+
+
+
+Q> one question I would want to ask how does spring container know which objects
+to manage and where are they defined ?
+Ans : spring containers with the help of a configuration file  know which objects
+to manage  spring framework will l pick up those objects and it will instantiate them
+
+Configuration file contains the bean defination
+
+so if you want an object to be managed by Spring framework you need to make or declare that
+particular object as a bean
+
+
+The Spring IoC (Inversion of Control) container is a core component of the Spring Framework responsible 
+for managing the lifecycle and configuration of application objects, known as beans.
+ The container uses configuration metadata to instantiate, configure, and assemble these beans. 
+The configuration metadata can be provided in various formats, including XML, Java annotations, and Java code
+
+
+Bean Definition : A bean definition includes the configuration metadata that the Spring container need to know to 
+create and manage the bean.
+
+<bean id="myBean" class="car.example.bean.MyBean" >
+     <property name="message" value="I am a first bean"/>
+ </bean>
+
+=====================================================
+
+
+Dedendency Injection can be acheived by two ways through :
+
+Constructor Injection 
+Setter Injection
+
+
+==============================================
+
+Autowire:
+
+1)ByName : 
+
+When we try to use autowire ByName , the injection happens with the
+help of Setter
+
+2)ByType
+we talk about Auto wiring by type now with auto
+
+wiring by type spring will inject the bean based on its type and if let's say
+
+you have two classes and if one class depends on another class then spring will look for a bean that matches the
+
+type and it'll inject it into the class that needs it
+
+3) byConstructor
+---------------------------------------------------------
+
+Annotation in Java Provides a metadata to your code.
+
+1) Component - this annotation simply marks a Java class as a bean 
+
+2) Autowired- using which spring will autowire the dependency with the matching typ
+
+3) Qualifire- so if there are multiple matching bean types you can specify qualifier
+as to which Bean should be matched over here 
+
+4) is used to inject property values into your beans
+
+5)Repository -used to uh Define the data repository 
+
+6) Service - it is used to indicate that this particular class is providing Business
+
+7)Controller - used to to create web controllers that will handle HTTP request 
+
+8) Request mapping -
+
+9)SpringBootApplication-
+
+10)RestController - The annotation which means that we are ready to use spring MVC to handle web request 
+      
+It  combines two annotations controller and response body and it indicates that this class is responsible
+
+for handling HTTP req  and return the response in the form of a restful representation
+
+
+11)ComponentScan
+
+12)Configuration
+
+
+
+-----------------------------------------------
+
+Components refers to a Java class that is managed by the
+Spring IoC Container. 
+
+component - is a special kind of a bean that is designed to be autodetected okay and
+
+it's a bean only uh there is hardly any difference but it will be autod detected rather than we manually defining
+
+---------------------------------------------
+
+Defining Components in Spring :
+
+i) Using XML
+ii) Using Annotation
+
+----------------------------------------------------
+
+Component scanning is a feature helps to automatically detects and register
+beans from predefined package paths.
+
+---------------------------------------------------------------------
+
+ @Autowired 
+    public Manager(Employee employee) {
+        this.employee = employee;
+    }
+
+Spring will take a look what this particular class needs , it needs employee.
+
+So what it will do is it will automatically inject the bean of type employee
+
+
+===========================================
+
+Qualifier("employee") - is normally used when we have multiple beans
+registered with the same type but different names
+
+============================================================================\
+
+Spring Boot Architecture :
+
+Presentation layer - Presentation layer presents the data and the application
+
+features to the users. This is the layer where in all the controller class exists.
+
+so what does controllers do so controller
+accepts the request from the user validates the inputs that the user has
+given and passes it to the next layer which is the service layer
+
+Service Layer - is where bussiness logic resides in the appliation. Task such as 
+
+evaluation, descision making, processing of data is done at this layer.
+
+this layer also
+does the job of interacting with both presentation and the data access layer
+
+so this layer sits in between and does the job of communicating with both the layers and they are frequently being
+
+called by presentation layer and they will call the data access layer
+
+
+Data Acess Layer : where all the repository classes exist.
+
+====================
+
+Spring Boot Architecture Control Flow: 
+
+let us take an example let's say we are building a
+
+library management system so we will have a browser from where the user will
+
+be interacting with the application since it's a web- based application and so user
+
+will be sending a request and that request will be handled or received by
+
+the controller ,so the user interacts with the controller controller
+
+it will take a look at the request and it will forward it to the service layer
+
+now service layer classes interact with the repository classes and repository in
+
+turn interact with the database now service layer is the layer that will be
+
+responsible for all the logic that is related to our business which is a business logic so that will reside in
+
+the service layer,  controller and repository will do the job of of interacting with the user and
+
+interacting with the database respectively then once the data has been fetched from the database by the
+
+repository layer okay what repository layer will do is it will pass the data
+
+to the service and eventually the data will flow to controller and user will
+
+see it in his  browser so this is a flow in which a typical spring boot
+
+application works the request comes through the control roller from the user
+
+then service then repository and then it travels reverse back to the controller all right so this is a typical
+
+architecture of a spring boot application
+
+
+
+
+
+==============================================================================
+
+
+DispatcherServlet - it routes incoming request to the appropriate controller
+method. Spring boot auto configure this servlet.
+
+RestController - at the class level tell springboot that this particular class is a controller
+and handles http request.
+ RestController is used for making restful web services with the help of the @RestController annotation. 
+This annotation is used at the class level and allows the class to handle the requests made by the client
+
+
+Use @Controller when you need to render web pages and work with views.
+Use @RestController when building RESTful APIs where the response is typically JSON or XML.
+
+
+=============================================================================
+
+ResponseEntity - is used to represent the HTTP response, including the status code, headers, and body.
+
+ResponseStatusException is used to throw exceptions with specific HTTP status codes.
+
+
+@RequestBody annotationis used to bind the HTTP request body 
+
+When a client sends a POST, PUT, or PATCH request to a server, the body of the request often contains data (e.g., JSON)
+ that needs to be processed by the server. 
+The @RequestBody annotation tells Spring to convert the request body into the specified Java object.
+
+
+
+Request Mapping - 
+Maps the base URL for this controller. In this case, all routes will start with /api.
+
+can either be done at class level (where a common endpoint is repeating ) or method level 
+
+method level : @RequestMapping(value = "/api/public/categories", method = RequestMethod.GET)
+
+=====================================================================================
+
+Object-Relational Mapping (ORM) - Whenever there is a class, that class can be automatically
+converted to a table with its attribute being converted to columns.
+
+so now the devlopers doesnot have to write queries for table creation. its created automatically
+
+whenever an object is created, its data can be saved in the database as row in table, this is automatically
+handled by ORM
+
+====================================================================================
+
+Java Persistence API (JPA)  - 
+
+PA (Java Persistence API) is a standard specification in Java for managing and accessing relational data in applications. 
+It provides a way to map Java objects (entities) to database tables and handle CRUD (Create, Read, Update, Delete) 
+operations through an abstraction layer.
+
+
+
+================================================================================================
+
+=================================================================================================
+
+"Hello, and thank you for this opportunity. My name is [Rahul Mandal],I’m a  graduate in Electrical eng from AEC with 8.64 cgpa
+ and I’m a Full Stack Developer with [1.10 years] 
+ of experience at Mphasis in building scalable, user-friendly web applications. 
+My expertise spans backend technologies like springboot , hibernate, micorsevices, restapi 
+and frameworks such as React or Angular .
+I have worked on on two RLL project project i.e banking app . the technologies used is springboot ,spring data JPA, hibernate,
+mysql angular,
+and the oether us employee payroll application in that  technologies used is microservices
+I am also fimiliar with tools like docker , kubernetes, jenkins etc
+I am also AWS certified developer assoctiate.
+I’m excited about the prospect of bringing my skills for the team and contributing to relevant projects.
+
+
+React :
+
+To Create React application :
+ 
+first install node , then
+
+npm create vite@latest   or  npx create-react-app myapp
+ npm install
+  npm run dev                            npm start   to  ->   start the server 
+  localhot 5173
+
+
+What is JXS ? Java script xml
+
+Special Dialect of JS(Its is not HTML
+
+JSX Detemines how the UI will look wherever the componet is used.
+
+Browser dont understand JSX code . We wite JSX thn run tool to turn it into normal JS.
+
+
+
+Execution starts from index.html file
+
+
+React is JavaScript library to build dynamic and interactive user interfaces.
+Used to create single page applications.
+
+
+Component :   reusable parts of the UI
+
+is the base class for the React components defined as JavaScript classe
+
+To define a React component as a class, extend the built-in Component class and define a render method:
+
+import { Component } from 'react';
+
+class Greeting extends Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+
+
+Types of component :
+
+1) class component  - 
+ 
+stateful - can manage state
+access to lifecycle method
+more boilerplate code
+  
+
+2) Functional componets
+
+Initailly stateless
+can use hooks for state and effects
+simpler and more concise
+
+
+States : ,
+
+ state refers to an object that holds data or information about the component and can change over time.
+It is mutable.
+
+For example:
+The useState(0) initializes count with 0.
+The setCount function is used to update the count state.
+
+
+
+Props - 
+
+is a way of passing data from parent to chidren. 
+Props are just a communication channel  between components. 
+It is always moving from parent to children
+It is immutable
+
+
+key:
+
+  is a attribute we need to include while creating list of elements.
+used to give an identity to the elements in the list.
+are used to identify which item in the list are changes ,updated or deleted.
+
+
+
+Super keyword : hepls you to access and call fucntions on an objects parent
+
+Synthetic Events -
+
+ is a kinf of object which act as a cross browser wrapper around the browser's nativ event.
+It helps us to combine the behaviour of various broswer into singnal API
+
+
+To create an event in React,we attach an event handler like onClick, onChange to JSX element
+
+
+HOC - is the advanced method of resuing rhe component functionality logic.
+It simply takes the oiginal component and returns the enhanced components
+
+
+React routing - 
+
+components if a react-router are:
+
+router
+switch
+route
+link
+
+
+Lifecycle methods of component 
+
+Initializarion
+Mounting
+Updating
+Unmounting
+
+
+refs - is a function provided by react to access the DOM element .
+
+refs are used in cases where we want to change the value of a chil component, without making use of props and all.
+we can use callbacks with them
+
+
+Hooks - provide a direct API to react concepts such as props, states , context, refs ect
+
+
+useState hook : 
+
+Using this hook we can declare a state variable inside a  fucntion but only one sate variable can be declared usinfg single
+useState() hook . Whenver the useState() hook is used, the value of the sate variable is changed and the new varibale is stored in a new
+cell in the stack.
+
+
+useEffect hook 
+
+in React eleminates the side effect of using class based components. 
+It takes two arg  one takes method or function  where second arg is optional.
+
+
+
+Prop Drilling: 
+
+It is a situtaion when the same data is being sent to almost level due to requirements in the final level.
+
+The proplem with the prop drilling is that whenever data from the parent component will be needed, it would have to come
+from each level
+
+
+
+React redux :
+
+is a statement management tool which makes it easier to pass these states from one component to another irrespective of their 
+position is the components tree.
+
+
+It provides centralized state management. i.e single store for whole application
+It optimize performance as it prevents re-rendering of components
+
+
+Core components of react-reduc : 
+
+Redux store : It is an object that holds the application state
+Action Creators : These are functions that return action obj
+Action : Action are simple object which have two properties : type and payload 
+Reducers:  Reducers are pure functions that update the state of the application in response to actions
+
+
+
+ContextAPI : 
+
+ is used to pass global variables anywhere in the code. 
+It helps when there is a need for sharing state between a lot of nested components. 
+It is light in weight and easier to use, to create a context just need to call React.createContext(). 
+It eliminates the need to install other dependencies or third-party libraries like redux for state management. 
+It has two properties Provider and Consumer. 
+
+
+
+. Explain provider and consumer in ContextAPI?
+
+A provider is used to provide context to the whole application whereas a consumer consume the context provided by nearest provider. 
+
+In other words The Provider acts as a parent it passes the state to its children whereas the Consumer uses the state that has been passed. 
+
+
+What is axios and how to use it in React?
+
+Axios, which is a popular library is mainly used to send asynchronous HTTP requests to REST endpoints. 
+This library is very useful to perform CRUD operations.
+
+
+
+
+==========
+Can you provide a brief overview of the project
+
+What is the current status  of the project?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
