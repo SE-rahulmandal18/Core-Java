@@ -19,7 +19,7 @@ public class TestingJoin {
         t1.join();
         Thread t3 = new Thread(p3);
         t3.start();
-        t2.join();
+//        t2.join();
         System.out.println("\n Thread 3 started");
 
         long endTime = System.currentTimeMillis();

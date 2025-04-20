@@ -26,7 +26,6 @@ import java.util.*;
         // int 0 atta h to o1 & o2 ordering m equal h
         // int +ve atta h to o1 baad m ayega o2 s
 
-        // example  SORT IN ASCENDING ORDER
         //   o1 o2
         //   5  3
         //   3  5
@@ -42,6 +41,7 @@ import java.util.*;
 
     public class TestingList {
         public static void main(String[] args) {
+            List<Integer> list = new ArrayList<>();
 
             /*
 

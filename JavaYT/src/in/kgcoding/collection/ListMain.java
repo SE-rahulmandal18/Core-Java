@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-class Student {
+class Student implements Comparable<Student>{
     private String name;
     private double gpa;
 
@@ -19,6 +19,22 @@ class Student {
 
     public double getGpa() {
         return gpa;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Student{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", gpa=").append(gpa);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    // 4.compareTo(3) --> 4, 3
+    @Override
+    public int compareTo(Student o) {
+
+        return Double.compare(o.getGpa(), this.getGpa());
     }
 }
 

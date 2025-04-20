@@ -22,7 +22,7 @@ public class LinkedListMain {
         System.out.println(linkedList);
 
 
-        LinkedList<String> animals = new LinkedList<>(Arrays.asList("Cat","Dog","Elephant", "Lion"));
+        LinkedList<String> animals = new LinkedList<>(Arrays.asList("Cat","Dog","Elephant", "Lion  "));
         LinkedList<String> animalsToRemove = new LinkedList<>(Arrays.asList("Dog", "Lion"));
         animals.removeAll(animalsToRemove);
         System.out.println(animals);

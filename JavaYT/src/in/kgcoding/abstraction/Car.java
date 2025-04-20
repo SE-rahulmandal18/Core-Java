@@ -13,6 +13,6 @@ public class Car extends Vehicle{
 
     @Override
     public void getSetGo() {
-        System.out.println("going to pacle....");
+        System.out.println("going to place....");
     }
 }

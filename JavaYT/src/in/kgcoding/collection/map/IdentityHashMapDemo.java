@@ -1,4 +1,4 @@
-package in.kgcoding.collection;
+package in.kgcoding.collection.map;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
