@@ -2,6 +2,14 @@ package in.kgcoding.collection.map;
 import java.util.Map;
 import java.util.WeakHashMap;
 
+/**
+ * WeakHashMap is a hash table based implementation of the Map interface
+ * that allows keys to be garbage collected when they are no longer in use.
+ * It is useful for implementing memory-sensitive caches.
+ *
+ * WeakHashMap is not synchronized and should not be used in concurrent applications
+ * without external synchronization.
+ */
 public class WeakHashMapDemo {
     public static void main(String[] args) {
         WeakHashMap<String, Image> imageCache = new WeakHashMap<>();
@@ -12,6 +20,12 @@ public class WeakHashMapDemo {
         System.out.println("Cache after running (some entries may be cleared): " + imageCache);
     }
 
+    /**
+     * Loads the cache with some images.
+     * The keys are weakly referenced, so they can be garbage collected.
+     *
+     * @param imageCache the WeakHashMap to load
+     */
     public static void loadCache(Map<String, Image> imageCache) {
         String k1 = new String("img1");
         String k2 = new String("img2");
@@ -20,6 +34,11 @@ public class WeakHashMapDemo {
     }
 
 
+    /**
+     * Simulates the application running for a while.
+     * This is to demonstrate that the WeakHashMap entries may be cleared
+     * after garbage collection.
+     */
     private static void simulateApplicationRunning() {
         try {
             System.out.println("Simulating application running...");
