@@ -1,4 +1,4 @@
-package in.kgcoding.collection;
+package in.kgcoding.collection.set;
 
 import java.util.HashSet;
 import java.util.Set;

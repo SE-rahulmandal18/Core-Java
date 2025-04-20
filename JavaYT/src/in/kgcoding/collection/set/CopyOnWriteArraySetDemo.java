@@ -1,4 +1,4 @@
-package in.kgcoding.collection;
+package in.kgcoding.collection.set;
 
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArraySet;

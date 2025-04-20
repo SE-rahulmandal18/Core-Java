@@ -1,4 +1,4 @@
-package in.kgcoding.collection;
+package in.kgcoding.collection.list;
 
 import java.util.*;
 

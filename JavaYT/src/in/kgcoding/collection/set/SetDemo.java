@@ -1,4 +1,4 @@
-package in.kgcoding.collection;
+package in.kgcoding.collection.set;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentSkipListSet;
@@ -33,7 +33,7 @@ public class SetDemo {
         Set<Integer> set1 = new ConcurrentSkipListSet<>();
         
         // unmodifiable set
-        Set<Integer> integers = Set.of(1,2,3,4,5,6,7,8,9,10);
+        Set<Integer> integers = Set.of(1,2,3,4,5,6,7,8,9,10,11);
         Collections.unmodifiableSet(integers);
 
 
