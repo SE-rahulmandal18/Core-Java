@@ -6,9 +6,9 @@ public class HashTableDemo {
     public static void main(String[] args) {
        /* Hashtable<Integer, String> hashtable = new Hashtable<>();
         // Hashtable is synchronized
-        // no null key or value
-        // Legacy Class, ConcurrentHashMap
-        // slower than HashMap
+        // no null key or value allowed
+        // Legacy Class, replaced by ConcurrentHashMap
+        // slower than HashMap because of synchronization
         // only linked list in case of collision
         //  all methods are synchronized
         hashtable.put(1, "Apple");

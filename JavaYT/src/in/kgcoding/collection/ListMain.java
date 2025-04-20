@@ -3,6 +3,15 @@ package in.kgcoding.collection;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+// Comparable and Comparator
+// Comparable: used to sort the objects of a class
+// Comparator: used to sort the objects of a class in a different way
+// Comparable: natural ordering
+// Comparator: custom ordering
+// Comparable: implemented by the class itself
+// Comparator: implemented by a separate class
+// Comparable: only one way to sort
+// Comparator: multiple ways to sort
 
 class Student implements Comparable<Student>{
     private String name;
