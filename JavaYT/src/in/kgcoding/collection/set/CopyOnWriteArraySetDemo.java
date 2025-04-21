@@ -28,6 +28,14 @@ public class CopyOnWriteArraySetDemo {
             // Attempting to modify the set while iterating
             copyOnWriteArraySet.add(6);
         }
+
+        System.out.println("\nIterating and modifying ConcurrentSkipListSet:");
+        for (Integer num : concurrentSkipListSet) {
+            System.out.println("Reading from ConcurrentSkipListSet: " + num);
+            // Attempting to modify the set during iteration
+            concurrentSkipListSet.add(6);
+        }
     }
+
 
 }
