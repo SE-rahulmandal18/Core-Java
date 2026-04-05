@@ -15,6 +15,6 @@ public class AccessTest {
 
         System.out.println(newCar);
 
-        Default def = new Default();
+        Default def = new Default(); // able to create obj of the default class as class has default access-within same package
     }
 }
