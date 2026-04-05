@@ -3,6 +3,7 @@ package com.inheritance;
 public class TwoWheeler extends Vehicle{
     TwoWheeler(){
        setNumberOfTires(2);
+        numberOfTires=4;
 
     }
     public void balance(){
