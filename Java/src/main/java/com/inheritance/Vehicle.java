@@ -1,7 +1,7 @@
 package com.inheritance;
 
 public class Vehicle {
-     int numberOfTires;
+     private int numberOfTires;
 
     public void setNumberOfTires(int numberOfTires){
         this.numberOfTires = numberOfTires;
