@@ -2,6 +2,7 @@ package com.inheritance;
 
 public class Vehicle {
      private int numberOfTires;
+     int numberofTires; // default access
 
     public void setNumberOfTires(int numberOfTires){
         this.numberOfTires = numberOfTires;
