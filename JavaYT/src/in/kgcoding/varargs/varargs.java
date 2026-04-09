@@ -1,7 +1,19 @@
 package in.kgcoding.varargs;
 
-public class varargs {
-    public static void main(String[] args) {
+import java.util.Scanner;
 
+public class VarargsTest {
+    public static void main(String... args) {
+        
+        System.out.println(sum(2, 3, 5,6,7));
     }
+    
+    public static int sum(int first, int second, int... a){
+       int sum = first + second;
+        for(int i : a){
+            sum +=i;
+        }
+        return sum;
+    }
+    
 }
