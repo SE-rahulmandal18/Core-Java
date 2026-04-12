@@ -2,9 +2,6 @@ package in.kgcoding.collection.list;
 
 import java.util.*;
 
-
-
-
 /*
     class StringLengthComparator implements Comparator<String>{
         //  o1    o2
@@ -41,9 +38,12 @@ import java.util.*;
 
     public class TestingList {
         public static void main(String[] args) {
-            List<Integer> list = new ArrayList<>();
 
-            /*
+
+
+            
+            List<Integer> list = new ArrayList<>();
+        /*
 
         List<Integer> list = new ArrayList<>();
         list.add(1);
