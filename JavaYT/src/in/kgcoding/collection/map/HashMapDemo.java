@@ -24,6 +24,7 @@ public class HashMapDemo {
         System.out.println(map.containsKey(2));
         System.out.println(map.containsValue("Rahul"));
 
+        // Set<Integer> keys = map.keySet()
         for (Integer i : map.keySet()) {
             System.out.println(map.get(i));
         }
