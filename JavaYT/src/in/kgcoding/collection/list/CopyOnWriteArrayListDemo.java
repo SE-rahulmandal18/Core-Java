@@ -21,7 +21,7 @@ public class CopyOnWriteArrayListDemo {
 
         // read more
 
-
+        // List<String> shoopingList = new ArrayList<>(); // if we use ArrayList we will get exception as concurrent modification exception
         List<String> shoopingList = new CopyOnWriteArrayList<>();
         shoopingList.add("Milk");
         shoopingList.add("Eggs");
@@ -30,6 +30,7 @@ public class CopyOnWriteArrayListDemo {
 
         for(String item : shoopingList) {
             System.out.println(item);
+            //try to modify the lsit while reading
             if(item.equals("Eggs")){
                 shoopingList.add("Butter");
                 System.out.println("Added Butter while Reading");
