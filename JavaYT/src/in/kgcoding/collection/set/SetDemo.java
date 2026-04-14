@@ -11,6 +11,14 @@ public class SetDemo {
         // The Set interface is a subinterface of Collection.
         // The Set interface is implemented by several classes, including HashSet, LinkedHashSet, and TreeSet.
 
+        Set<Integer> set = new HashSet<>();
+        set.add(12);
+        set.add(1);
+        set.add(67);
+        System.out.println(set);
+
+        
+
 //        Set<Integer> set = new HashSet<>(); // if you want to maintain order insertion use LinkedHashSet,TreeSet instead HashSet
         NavigableSet<Integer> set = new TreeSet<>();
         set.add(12);
@@ -26,8 +34,8 @@ public class SetDemo {
             System.out.println(i);
         }
 
-        // for thread safety
-//         Set<Integer> set1 = Collections.synchronizedSet(set);
+        // for thread safety - > synchronizedSet does external synchronization, so set is wrapped in synchronized block
+//         Set<Integer> set1 = Collections.synchronizedSet(set); 
 
         // for thread safety use ConcurrentSkipListSet // re
         Set<Integer> set1 = new ConcurrentSkipListSet<>();
