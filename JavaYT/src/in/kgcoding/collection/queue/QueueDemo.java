@@ -51,7 +51,57 @@ public class QueueDemo {
 //         System.out.println(queue2.add(3)); // throws exception
         System.out.println(queue2.offer(3)); // false
 
+       // part of the queue interface
+      // order elements based on their natural ordering(for premitive lowest first, and string alphabetically)
+     // custom compartor for custom ordering 
+    // does not allow null elements  
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(15);
+        pq.add(10);
+        pq.add(30);
+        pq.add(5);
 
+        while(!pq.isEmpty()) {
+            System.out.println(pq.poll());
+
+
+       // Dequeue - Double ended queue 
+       // allow insertion and removal of elements from both sides
+      // versatile than regular stack and queue because they support all the operation for both 
+
+      \* INSERTION 
+
+          addFirst(E e) : Inserts the specified elements at the front.
+           addLast(E e) : Inserts the specified elements at the end.
+           offerFirst(E e) : Inserts the specified elements at the front if possible.
+          offerLast(E e) : Inserts the specified elements at the end if possible.
+        */  
+
+            \* INSERTION 
+
+          removeFirst() : Retrives and remove the first element.
+           removeLast(E e) :  Retrives and remove the last element..
+           pollFirst(E e) : Retrives and remove the first element, or return null if empty .
+         pollLast(E e) : Retrives and remove the last element, or return null if empty ..
+        */  
+
+
+         // Iterator
+          List<Integer> list = new ArrayList<>();
+            Iterator<Integer> iterator = list.iterator();
+            while(iterator.hasNext()){
+                System.out.println(iterator.next());
+
+
+
+          List<Integer> list = new ArrayList<>();
+            Iterator<Integer> iterator = list.iterator();
+            while(iterator.hasNext()){
+                Integr list = iterator.next();
+                if(list % 2 == 0){
+                 iterator.remove();
+                }
+                   System.out.println(list);
     }
 }
 
