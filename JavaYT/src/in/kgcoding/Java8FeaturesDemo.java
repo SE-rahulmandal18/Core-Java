@@ -8,6 +8,86 @@ import java.util.stream.Collectors;
 public class Java8FeaturesDemo {
     public static void main(String[] args) {
 
+        // Stream Demo
+        // with the help of stream we can process collection of data in a functional and declarative manner
+
+          
+	    List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+	    System.out.println(numbers.stream().filter(x -> x % 2 == 0).count());
+
+        // Creating Streams
+        // 1. From collection
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+	    Stream<Integer> stream = numbers.stream();
+
+        // 2. From Arrays
+        String[] array = {"a", "b", "c"}
+         Stream<String> stream  = Arrays.stream(array);
+        //3. Using Stream.of()                                                                    
+       Stream<String> stream = Stream.of("a", "b");
+	    
+
+        // Intermediate operation
+        List<String> list = new Arrays.asList("Akshit", "Ram", "Shayam", "Anshu");
+       Stream<String> filteredStream = list.stream().filter(x -> x.startsWith("A"));  // no filtering at this point
+       
+       long res =  list.stream().filter(x -> x.startsWith("A")).count();
+        System.out.print(res);
+
+       // map
+       Stream<String> stringSteam = list.stream().map(x -> x.toUpperCase());
+
+       // sorted
+       Stream<String> sortedStream = list.stream().sorted();  // natural ordering
+     Stream<String> sortedStreamComparator = list.stream().sorted((a ,b) -> a.length() - b.length());
+
+     // distinct
+        System.out.println(list.stream().filter(x -> x.startsWith("A")).distinct().count());
+
+
+
+        // Terminal operation
+        List<Integer> list = Arrays.asList(1, 2, 3);
+        list.stream().collect(Collectors.toList());
+        list.stream().toList();
+
+        // forEach
+        list.steam().forEach(x - > System.out.println(x));
+
+        // reduce -> combines element to produce single result
+       Optional<Stream> optionalInteger =  list.stream.().reduce((x, y) -> (x + y));
+        System.out.println(optionalInteger.get());
+
+        // anyMatch ,  allMatch, noneMathch - thy are sortcuit operation meaning as soon as thy find a macth thy stop processing further
+       boolean b = list.stream().anyMatch(x -> x%2 == 0);
+        System.out.print(b); // true
+
+          boolean b = list.stream().allMatch(x -> x > 0);
+        System.out.print(b); // true
+
+          boolean b = list.stream().noneMatch(x -> x < 0);
+        System.out.print(b); // true
+
+        // findFirst, findAny - thy are sortcuit operation meaning as soon as thy find a macth thy stop processing further
+        System.out.println(list.stream().findFirst().get());
+        System.out.println(list.stream().findAny().get());
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
         // Predicate --> Functional interface ( Boolean valued function )
         Predicate<Integer> isEven = x -> x % 2 == 0;
         System.out.println(isEven.test(4));
