@@ -76,3 +76,47 @@ public class ListMain {
         }
     }
 }
+
+
+
+// comparator
+
+
+import java.util.*;
+
+class Codechef {
+
+    static class MyComparator implements Comparator<Integer> {
+
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            // Descending order
+            // Example: o1 = 3, o2 = 5
+            // return 5 - 3 = 2
+            return o2 - o1;
+            
+            
+            //sort ascending : 5 , 3  -->  3, 5 
+            
+            // return o1 - o2;
+        }
+    }
+
+    public static void main(String[] args) throws java.lang.Exception {
+
+        List<Integer> list = new ArrayList<>();
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        // Natural ordering: ascending
+        list.sort(null);
+
+        // Custom ordering: descending
+        list.sort(new MyComparator());
+
+        System.out.println(list);
+    }
+}
+
